@@ -14,5 +14,9 @@ pip install django
 django-admin startproject myweb .
 python manage.py startapp restaurant_menu
 python manage.py runserver
+python manage.py makemigrations
+python manage.py migrate
+
+
 
 
