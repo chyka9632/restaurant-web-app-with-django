@@ -13,9 +13,11 @@ pip install django
 # Creating a project and running the server
 django-admin startproject myweb .
 python manage.py startapp restaurant_menu
-python manage.py runserver
+python manage.py runserve
 python manage.py makemigrations
 python manage.py migrate
+python manage.py createsuperuser
+
 
 
 
