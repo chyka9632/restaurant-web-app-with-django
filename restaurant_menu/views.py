@@ -14,7 +14,7 @@ class MenuList(generic.ListView):  # Class-based view
         return context
 
 
-class MenuItemDetails(generic.DetailView):
+class MenuItemDetail(generic.DetailView):
     model = Item
     template_name = "menu_item_detail.html"
     pass

@@ -24,6 +24,10 @@ class Item(models.Model):
     date_created = models.DateField(auto_now_add=True)
     date_updated = models.DateField(auto_now=True)
 
+    @property
+    def formatted_price(self):
+        return "${:.2f}".format(self.price)
+
     def __str__(self):
         return self.meal
 
