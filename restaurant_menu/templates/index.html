@@ -7,12 +7,18 @@
 <body>
     <h1>Restaurant Menu</h1>
       {% for meal in meals %}
-      <h2>{{ meal.1 }}</h2>
-       {% for i in item_list %}
-            <h3>{{ i.meal }}</h3>
-            <p>{{ i.description }}</p>
-
-    {% endfor %}
+          <h2>{{ meal.1 }}</h2>
+              {% for i in item_list %}
+                   {% if i.meal_type == meal.0 %}
+                       {% if i.status == 0 %}
+                          <h3><del>{{ i.meal }}</del></h3>
+                          <p>{{ i.description }}</p>
+                       {% else %}
+                          <h3>{{ i.meal }}</h3>
+                          <p>{{ i.description }}</p>
+                        {% endif %}
+                  {% endif %}
+              {% endfor %}
       {% endfor %}
 </body>
 </html>
